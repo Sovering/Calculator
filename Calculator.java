@@ -14,7 +14,7 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
 
         // The result of the operation
-        int result = 0;
+        double result = 0;
 
         // The original input
         System.out.print("Enter an expression to compute: ");
@@ -38,7 +38,7 @@ public class Calculator {
                     result = t0 * t2;
                     break;
                 case '/':
-                    result = t0 / t2;
+                    result = (double)t0 / t2;
             }
 
             //Display result
@@ -60,20 +60,20 @@ public class Calculator {
                     result = t0 * t2 - t4;
                 }
                 if (ch1 == '*' && ch2 == '/') {
-                    result = t0 * t2 / t4;
+                    result = t0 * (double)t2 / t4;
                 }
 
                 if (ch1 == '/' && ch2 == '/') {
-                    result = t0 / t2 / t4;
+                    result = (double)t0 / t2 / t4;
                 }
                 if (ch1 == '/' && ch2 == '*') {
-                    result = t0 / t2 * t4;
+                    result = (double)t0 / t2 * t4;
                 }
                 if (ch1 == '/' && ch2 == '+') {
-                    result = t0 / t2 + t4;
+                    result = (double)t0 / t2 + t4;
                 }
                 if (ch1 == '/' && ch2 == '-') {
-                    result = t0 / t2 - t4;
+                    result = (double)t0 / t2 - t4;
                 }
 
                 if (ch1 == '+' && ch2 == '+') {
@@ -86,7 +86,7 @@ public class Calculator {
                     result = t2 * t4 + t0;
                 }
                 if (ch1 == '+' && ch2 == '/') {
-                    result = t2 / t4 + t0;
+                    result = (double)t2 / t4 + t0;
                 }
 
                 if (ch1 == '-' && ch2 == '-') {
@@ -96,10 +96,10 @@ public class Calculator {
                     result = t0 - t2 + t4;
                 }
                 if (ch1 == '-' && ch2 == '*') {
-                    result = t2 * t4 - t0;
+                    result = -1 * (t2 * t4 - t0);
                 }
                 if (ch1 == '-' && ch2 == '/') {
-                    result = t2 / t4 - t0;
+                    result = -1 * ((double)t2 / t4 - t0);
                 }
 
                 //Display result
